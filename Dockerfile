@@ -5,7 +5,7 @@ RUN apk --no-cache add --virtual build-dependencies \
     git \
     musl-dev \
   && mkdir -p /tmp/go \
-  && GOPATH=/tmp/go go get github.com/mailhog/MailHog \
+  && GOPATH=/tmp/go go get github.com/ddm/MailHog \
   && mv /tmp/go/bin/MailHog /usr/local/bin/mailhog \
   && rm -rf /tmp/go \
   && apk del --purge build-dependencies \
